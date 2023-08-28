@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Module1 {
+    function errorHandle(uint256 a, uint256 b) public pure returns (uint256 result, string memory errorMessage) {
+        if (a == 5) {
+            errorMessage = "a should not be five";
+            return (0, errorMessage);
+        }
+
+        if (b == 10) {
+            errorMessage = "b should not be ten";
+            return (0, errorMessage);
+        }
+
+        if (a < b) {
+            errorMessage = "a should be greater than or equal to b";
+            return (0, errorMessage);
+        }
+
+        result = a - b;
+    }
+}
