@@ -4,8 +4,8 @@ pragma solidity ^0.8.0;
 contract Module1 {
     function errorHandle(uint256 a, uint256 b) public pure returns (uint256 result) {
         
-        require(a != 5, "a should not be five");
-        require(b != 10, "b should not be ten");
+        require(a != 10, "a should not be ten");
+        require(b != 20, "b should not be twenty");
 
     // assert
         assert(a >= b);
